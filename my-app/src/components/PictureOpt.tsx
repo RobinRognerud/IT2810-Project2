@@ -1,31 +1,16 @@
 import React, { useState } from "react";
-import "./Picture.css";
 
-interface IPictureOptProps {}
+interface IPictureOptProps {
+  updatePictureNo: any;
+  pictureNo: string;
+}
 
-const PictureOpt: React.SFC<IPictureOptProps> = (props) => {
-  const [pictureNo, setPictureNo] = useState("0");
-
-  const updatePictureNo = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setPictureNo(e.target.value);
-  };
-
-  const pictureList = [
-    "https://www.svgrepo.com/show/30310/sun.svg",
-    "https://www.svgrepo.com/show/277708/owl.svg",
-    "https://www.svgrepo.com/show/77172/cat.svg",
-  ];
-
+const PictureOpt: React.FC<IPictureOptProps> = ({
+  pictureNo,
+  updatePictureNo,
+}) => {
   return (
     <div id="product-options">
-      <div>
-        {" "}
-        <img
-          className="Svg"
-          src={pictureList[parseInt(pictureNo)]}
-          alt="Harry Potter"
-        />{" "}
-      </div>
       <div id="picture-category">
         <label>
           Choice 1:

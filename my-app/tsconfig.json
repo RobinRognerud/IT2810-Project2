@@ -15,5 +15,9 @@
     "noEmit": true,
     "jsx": "react"
   },
-  "include": ["src", "../../../React-experimenting/DropDown"]
+  "include": [
+    "src",
+    "../../../React-experimenting/DropDown",
+    "../../../React-experimenting/my-experiment-react/src/components/PictureOptions.tsx"
+  ]
 }

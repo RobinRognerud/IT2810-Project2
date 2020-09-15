@@ -1,0 +1,15 @@
+.Svg {
+  height: 400px;
+  animation: spinn 10s infinite linear;
+  margin-bottom: 70px;
+  margin-top: 50px;
+}
+
+@keyframes spinn {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
