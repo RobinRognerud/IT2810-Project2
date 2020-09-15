@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import DisplayPicture from "./DisplayPicture";
-import PictureOpt from "./PictureOpt";
+import DisplayPicture from "./PictureComp/DisplayPicture";
+import PictureOpt from "./PictureComp/PictureOpt";
 
 interface IMainProps {}
 
