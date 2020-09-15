@@ -16,9 +16,11 @@ const Main: React.FC<IMainProps> = (props) => {
       <div className="picture-container">
         Bilder
         <DisplayPicture pictureNo={pictureNo} />
-        <PictureOpt updatePictureNo={updatePictureNo} pictureNo={pictureNo} />
       </div>
       <div className="text-container">Våre installasjoner</div>
+      <div className="options-container">
+        <PictureOpt updatePictureNo={updatePictureNo} pictureNo={pictureNo} />
+      </div>
     </div>
   );
 };
