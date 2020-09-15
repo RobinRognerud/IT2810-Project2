@@ -1,3 +1,18 @@
 .App {
   text-align: center;
 }
+
+#header {
+  height: 70px;
+  width: 100%;
+  background: grey;
+}
+
+.home-container {
+  background: #aaa;
+  height: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
