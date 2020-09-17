@@ -7,7 +7,8 @@ interface IFavoriteButtonProps {
 const FavoriteButton: React.FC<IFavoriteButtonProps> = ({ saveFavorite }) => {
   return (
     <div>
-      <button onClick={saveFavorite}>Lagre din favoritt her</button>
+      <p>Lagre din favoritt utstillingen til neste gang!</p>
+      <button onClick={saveFavorite}>Lagre utstilling</button>
     </div>
   );
 };
