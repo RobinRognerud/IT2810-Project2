@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 
 //Source: https://reactjs.org/docs/faq-ajax.html
 
-interface IPoetryProps {}
+interface IPoetryProps {
+  poetryNo: string;
+}
 
 const Poetry: React.SFC<IPoetryProps> = (props) => {
   const [contents, setContents] = useState([{ lines: [""] }]);
@@ -10,16 +12,18 @@ const Poetry: React.SFC<IPoetryProps> = (props) => {
 
   const dikt: any = "https://poetrydb.org/author,title/Taylor;Dance/lines.json";
 
-  /* const poems: string[] = [
+  const poems: string[] = [
     "https://poetrydb.org/author,title/Taylor;Dance/lines.json",
     "https://poetrydb.org/author,title/Taylor;fret/lines.json",
     "https://poetrydb.org/author,title/Taylor;jesus/lines.json",
     "https://poetrydb.org/author,title/Taylor;star/lines.json",
     "https://poetrydb.org/author,title/Taylor;good-natured/lines.json",
   ];
- */
+
+  const poetryNo = props.poetryNo;
+
   useEffect(() => {
-    fetch(dikt)
+    fetch(poems[parseInt(poetryNo)])
       .then((response) => response.json())
       .then(
         (data) => {
@@ -29,7 +33,7 @@ const Poetry: React.SFC<IPoetryProps> = (props) => {
           //TODO: gjør noe med error
         }
       );
-  }, dikt);
+  }, [poems[parseInt(poetryNo)]]);
 
   if (error) {
     return <div>Error: </div>;
