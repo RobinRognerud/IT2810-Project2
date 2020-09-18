@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import DisplayPicture from "./PictureComp/DisplayPicture";
 import PictureOpt from "./PictureComp/PictureOpt";
+import Music from "./Music";
+import Poetry from "./PoetryComp/Poetry";
 
 interface IMainProps {}
 
@@ -17,7 +19,10 @@ const Main: React.FC<IMainProps> = (props) => {
         Bilder
         <DisplayPicture pictureNo={pictureNo} />
       </div>
-      <div className="text-container">Våre installasjoner</div>
+      <div className="text-container">
+        Dikt + lyd
+        <Poetry /> <Music />
+      </div>
       <div className="options-container">
         <PictureOpt updatePictureNo={updatePictureNo} pictureNo={pictureNo} />
       </div>
