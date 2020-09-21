@@ -1,3 +1,5 @@
+/*  The pictures ! REMOVE !!!!!!!!
+
 .Svg {
   height: 400px;
   animation: spinn 10s infinite linear;
@@ -12,4 +14,165 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+/***** Tree animatoin ****/
+/*https://codepen.io/natvoc/details/MWywgeK?fbclid=IwAR2MKLjJecSjjLKpZYsWlTmFJFrttZFfxASKaIstZgyZwPcl7CbDHfKWJ0U*/
+
+/* HTML CSSResult body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+} */
+
+/* #tree {
+  display: none;
+} */
+svg {
+  width: 100%;
+  height: auto;
+  align-self: center;
+  justify-self: center;
+  margin-top: 15%;
+}
+
+#tree {
+  height: 100%;
+}
+
+svg #mujer {
+  animation-duration: 1.2s;
+  animation-name: meser;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes meser {
+  from {
+    transform: translateX(0) translateY(0);
+  }
+  to {
+    transform: translateX(12px) translateY(6px);
+  }
+}
+
+svg #columpio {
+  animation-duration: 1.2s;
+  animation-name: cuerdas;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes cuerdas {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(2px);
+  }
+}
+
+svg #hojas-arbol {
+  animation-duration: 3s;
+  animation-name: hojas;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes hojas {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.st0 {
+  fill: #3f3d56;
+}
+.st1 {
+  opacity: 0.1;
+  enable-background: new;
+}
+.st2 {
+  fill: #ffb9b9;
+}
+.st3 {
+  fill: #d0cde1;
+}
+.st4 {
+  fill: #2f2e41;
+}
+.st5 {
+  fill: #0c963a;
+}
+.st6 {
+  fill: #f2f2f2;
+}
+
+/******* Abstract animaton ******/
+/*https://codepen.io/mrmarley2/pen/VwaEKXw*/
+#top polygon {
+  fill: #f49e4c;
+  stroke-width: 3px;
+  animation: 4s scale infinite alternate;
+  transform-origin: 50% 50%;
+}
+
+#middle polygon {
+  fill: #565676;
+  stroke-width: 3px;
+  animation: 3s scale infinite alternate;
+  transform-origin: 50% 50%;
+}
+
+#bottom polygon {
+  fill: #f5ee93;
+  stroke-width: 3px;
+  animation: 5s scale infinite alternate;
+  transform-origin: 50% 50%;
+}
+
+@keyframes scale {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(0.5);
+  }
+}
+
+/********* Singing ball **********/
+/* https://codepen.io/z-mamba-san/pen/MWyrNbe */
+@keyframes music {
+  from {
+    transform: translatex(0px) translatey(0);
+  }
+  to {
+    transform: translatex(20px) translatey(20px);
+  }
+}
+#music1 {
+  animation: music 1s ease-in-out alternate infinite;
+}
+#music2 {
+  animation: music 1.2s ease-in-out alternate infinite;
+}
+
+@keyframes dance {
+  from {
+    transform: translatey(0px);
+  }
+  to {
+    transform: translatey(20px) rotatez(20deg);
+    transform-origin: center;
+  }
+}
+
+#shape,
+#earphone,
+#eyes,
+#mouth {
+  animation: dance 2s alternate infinite;
 }

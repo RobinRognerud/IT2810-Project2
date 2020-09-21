@@ -37,8 +37,8 @@ const Poetry: React.SFC<IPoetryProps> = (props) => {
   } else {
     return (
       <div className="poetry">
-        {contents[0].lines.map((line) => (
-          <p>{line}</p>
+        {contents[0].lines.map((line, i) => (
+          <p key={i}>{line}</p>
         ))}
       </div>
     );
