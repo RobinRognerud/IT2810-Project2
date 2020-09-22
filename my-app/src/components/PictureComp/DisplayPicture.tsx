@@ -6,12 +6,6 @@ interface IPictureOptProps {
 }
 
 const DisplayPicture: React.FC<IPictureOptProps> = (props) => {
-  /* const pictureList = [
-    "https://www.svgrepo.com/show/30310/sun.svg",
-    "https://www.svgrepo.com/show/12345/witch-hat.svg",
-    "https://www.svgrepo.com/show/299316/magic-wand-wizard.svg",
-  ]; */
-
   const pictureNo = props.pictureNo;
 
   return (

@@ -6,7 +6,7 @@ interface IPoetryProps {
   poetryNo: string;
 }
 
-const Poetry: React.SFC<IPoetryProps> = (props) => {
+const Poetry: React.FC<IPoetryProps> = (props) => {
   const [contents, setContents] = useState([{ lines: [""] }]);
   const [error, setError] = useState(null);
 
@@ -30,7 +30,9 @@ const Poetry: React.SFC<IPoetryProps> = (props) => {
           setError(error);
         }
       );
-  }, [poems[parseInt(poetryNo)]]);
+  }, [poems[parseInt(poetryNo)], poetryNo]);
+
+  /* Funker bra uten poems i arrayet, men får feilmelding*/
 
   if (error) {
     return <div>Error {error} </div>;
@@ -40,6 +42,7 @@ const Poetry: React.SFC<IPoetryProps> = (props) => {
         {contents[0].lines.map((line, i) => (
           <p key={i}>{line}</p>
         ))}
+        {console.log(contents[0].lines)}
       </div>
     );
   }

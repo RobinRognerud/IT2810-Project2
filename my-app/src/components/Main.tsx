@@ -10,6 +10,7 @@ import PoetryOpt from "./PoetryComp/PoetryOpt";
 interface IMainProps {}
 
 const Main: React.FC<IMainProps> = (props) => {
+  /*Initialize radiobutton values to 0 if nothing is saved in localstorage*/
   const [pictureNo, setPictureNo] = useState(
     localStorage.getItem("LocalStoragePictureNo") || "0"
   );
@@ -56,15 +57,24 @@ const Main: React.FC<IMainProps> = (props) => {
         <Music musicNo={musicNo} />
       </div>
       <div className="options-container">
-        <PictureOpt updatePictureNo={updatePictureNo} pictureNo={pictureNo} />
+        <div className="pictureOptions">
+          <PictureOpt updatePictureNo={updatePictureNo} pictureNo={pictureNo} />
+        </div>
         <br />
         <br />
-        <MusicOpt updateMusicNo={updateMusicNo} musicNo={musicNo} />
+        <div className="musicOptions">
+          <MusicOpt updateMusicNo={updateMusicNo} musicNo={musicNo} />
+        </div>
         <br />
         <br />
-        <PoetryOpt updatePoetryNo={updatePoetryNo} poetryNo={poetryNo} />
+        <div className="poetryOptions">
+          <PoetryOpt updatePoetryNo={updatePoetryNo} poetryNo={poetryNo} />
+        </div>
+
         <br />
         <br />
+      </div>
+      <div className="favorite-button">
         <FavoriteButton saveFavorite={saveFavorite} />
       </div>
     </div>

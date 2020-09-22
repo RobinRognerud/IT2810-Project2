@@ -1,39 +1,8 @@
-/*  The pictures ! REMOVE !!!!!!!!
-
-.Svg {
-  height: 400px;
-  animation: spinn 10s infinite linear;
-  margin-bottom: 70px;
-  margin-top: 50px;
-}
-
-@keyframes spinn {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
 /***** Tree animatoin ****/
 /*https://codepen.io/natvoc/details/MWywgeK?fbclid=IwAR2MKLjJecSjjLKpZYsWlTmFJFrttZFfxASKaIstZgyZwPcl7CbDHfKWJ0U*/
 
-/* HTML CSSResult body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: #fff;
-} */
-
-/* #tree {
-  display: none;
-} */
 svg {
   width: 100%;
-  height: auto;
-  align-self: center;
-  justify-self: center;
   margin-top: 15%;
 }
 
