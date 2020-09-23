@@ -30,6 +30,7 @@ const Poetry: React.SFC<IPoetryProps> = (props) => {
           setError(error);
         }
       );
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [poems[parseInt(poetryNo)]]);
 
   if (error) {

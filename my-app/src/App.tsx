@@ -8,7 +8,7 @@ import StartPage from "./components/StartPageComp/StartPage";
 function App() {
   return (
     <div className="App">
-      <h1>Gruppe 51</h1>
+      <h1 id="groupNr">Gruppe 51</h1>
       <StartPage />
       <Header />
       <Main />

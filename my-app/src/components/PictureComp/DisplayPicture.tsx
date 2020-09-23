@@ -17,7 +17,7 @@ const DisplayPicture: React.FC<IPictureOptProps> = (props) => {
   return (
     <div id="product-options">
       <div id="picture-category">
-        <img className="Svg" src={pictureList[parseInt(pictureNo)]} alt="" />
+        <img className="Svg" src={pictureList[parseInt(pictureNo)]} alt=""/>
       </div>
     </div>
   );

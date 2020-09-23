@@ -47,7 +47,6 @@ const Main: React.FC<IMainProps> = (props) => {
   return (
     <div className="home-container">
       <div className="picture-container">
-        Bilder
         <DisplayPicture pictureNo={pictureNo} />
       </div>
       <div className="text-container">
@@ -57,14 +56,8 @@ const Main: React.FC<IMainProps> = (props) => {
       </div>
       <div className="options-container">
         <PictureOpt updatePictureNo={updatePictureNo} pictureNo={pictureNo} />
-        <br />
-        <br />
         <MusicOpt updateMusicNo={updateMusicNo} musicNo={musicNo} />
-        <br />
-        <br />
         <PoetryOpt updatePoetryNo={updatePoetryNo} poetryNo={poetryNo} />
-        <br />
-        <br />
         <FavoriteButton saveFavorite={saveFavorite} />
       </div>
     </div>

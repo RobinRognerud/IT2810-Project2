@@ -7,14 +7,8 @@ export default class Hello extends React.Component<{}> {
   public render() {
     return (
       <div>
-        <div style={{ position: "relative", height: 500 }}>
-          <h1
-            style={{
-              outlineStyle: "none",
-              marginTop: "200px",
-              fontSize: "400%",
-            }}
-          >
+        <div>
+          <h1 className="welcome-text">
             Welcome to our gallery
           </h1>
           {/* https://codepen.io/postor/pen/mskxI */}
