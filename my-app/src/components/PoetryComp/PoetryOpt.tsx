@@ -10,7 +10,6 @@ const PoetryOpt: React.FC<IPoetryOptProps> = ({ poetryNo, updatePoetryNo }) => {
     <div id="product-options">
       <div id="poetry-category">
         <label>
-          Dance
           <input
             className="radio"
             name="poetryNr"
