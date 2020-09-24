@@ -1,23 +1,18 @@
 .welcome-text {
   outline-style: none;
-  padding-top: 30vh;
+  padding-top: 20vh;
   font-size: 9vw;
   font-family: American Typewriter, serif;
   color: beige;
   margin-top: 0;
-  margin-bottom: 10;
 }
 
 .startPage {
   position: relative;
-  height: 90vh;
+  height: 100vh;
   background-color: var(--background-color);
   text-align: center;
 }
-
-/* .arrow-div {
-  text-align: center;
-} */
 
 .arrows {
   width: 60px;
@@ -78,6 +73,14 @@
   -webkit-animation-delay: 0s; /* Safari 和 Chrome */
 }
 
-/* @media only screen and (max-device-width: 480px) {
+/* Liggende mobil */
+@media screen and (max-height: 480px) {
+  .options-container,
+  .picture-container,
+  .text-container {
+    margin: 3vw;
+  }
+  .welcome-text {
+    font-size: 4vw;
+  }
 }
- */

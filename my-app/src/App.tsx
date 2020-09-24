@@ -2,7 +2,6 @@ import React from "react";
 import "./App.css";
 import "./StartPage.css";
 import Main from "./components/Main";
-import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { ThemeProvider, useTheme } from "./components/ThemeContext";
 
@@ -32,7 +31,6 @@ function App() {
             </svg>
           </div>
         </div>
-        <Header />
         <div ref={helloRef}>
           <Main />
         </div>
