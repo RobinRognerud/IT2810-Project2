@@ -1,0 +1,244 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App render matches snapshot 1`] = `
+<div
+  className="App"
+>
+  <h1>
+    Gruppe 51
+  </h1>
+  <div>
+    <div
+      style={
+        Object {
+          "height": 500,
+          "position": "relative",
+        }
+      }
+    >
+      <h1
+        style={
+          Object {
+            "fontSize": "400%",
+            "marginTop": "200px",
+            "outlineStyle": "none",
+          }
+        }
+      >
+        Welcome to our gallery
+      </h1>
+      <svg
+        className="arrows"
+      >
+        <g
+          onClick={[Function]}
+        >
+          <path
+            className="a1"
+            d="M0 0 L30 32 L60 0"
+          />
+          <path
+            className="a2"
+            d="M0 20 L30 52 L60 20"
+          />
+          <path
+            className="a3"
+            d="M0 40 L30 72 L60 40"
+          />
+        </g>
+      </svg>
+    </div>
+    <div>
+      <div />
+    </div>
+  </div>
+  <div
+    id="header"
+  >
+    Tittel
+  </div>
+  <div
+    className="home-container"
+  >
+    <div
+      className="picture-container"
+    >
+      Bilder
+      <div
+        id="product-options"
+      >
+        <div
+          id="picture-category"
+        >
+          <img
+            alt=""
+            className="Svg"
+            src="https://www.svgrepo.com/show/30310/sun.svg"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="text-container"
+    >
+      Dikt + lyd
+      <div
+        className="poetry"
+      >
+        <p>
+          
+        </p>
+      </div>
+      <div>
+        <audio
+          controls={true}
+          src="Prologue.mp3"
+        />
+      </div>
+    </div>
+    <div
+      className="options-container"
+    >
+      <div
+        id="product-options"
+      >
+        <div
+          id="picture-category"
+        >
+          <label>
+            Choice 1:
+            <input
+              checked={true}
+              name="pictureNr"
+              onChange={[Function]}
+              type="radio"
+              value="0"
+            />
+          </label>
+          <label>
+            Choice 2:
+            <input
+              checked={false}
+              name="pictureNr"
+              onChange={[Function]}
+              type="radio"
+              value="1"
+            />
+          </label>
+          <label>
+            Choice 3:
+            <input
+              checked={false}
+              name="pictureNr"
+              onChange={[Function]}
+              type="radio"
+              value="2"
+            />
+          </label>
+        </div>
+      </div>
+      <br />
+      <br />
+      <div
+        id="product-options"
+      >
+        <div
+          id="music-category"
+        >
+          <label>
+            Choice 1:
+            <input
+              checked={true}
+              name="musicNr"
+              onChange={[Function]}
+              type="radio"
+              value="0"
+            />
+          </label>
+          <label>
+            Choice 2:
+            <input
+              checked={false}
+              name="musicNr"
+              onChange={[Function]}
+              type="radio"
+              value="1"
+            />
+          </label>
+          <label>
+            Choice 3:
+            <input
+              checked={false}
+              name="musicNr"
+              onChange={[Function]}
+              type="radio"
+              value="2"
+            />
+          </label>
+        </div>
+      </div>
+      <br />
+      <br />
+      <div
+        id="product-options"
+      >
+        <div
+          id="poetry-category"
+        >
+          <label>
+            Choice 1:
+            <input
+              checked={true}
+              name="poetryNr"
+              onChange={[Function]}
+              type="radio"
+              value="0"
+            />
+          </label>
+          <label>
+            Choice 2:
+            <input
+              checked={false}
+              name="poetryNr"
+              onChange={[Function]}
+              type="radio"
+              value="1"
+            />
+          </label>
+          <label>
+            Choice 3:
+            <input
+              checked={false}
+              name="poetryNr"
+              onChange={[Function]}
+              type="radio"
+              value="2"
+            />
+          </label>
+        </div>
+      </div>
+      <br />
+      <br />
+      <div>
+        <p>
+          Lagre din favoritt utstillingen til neste gang!
+        </p>
+        <button
+          onClick={[Function]}
+        >
+          Lagre utstilling
+        </button>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div
+      className="footer"
+    >
+      <h1>
+        Laget av oss :D 
+      </h1>
+    </div>
+  </footer>
+</div>
+`;

@@ -61,7 +61,6 @@ const Main: React.FC<IMainProps> = (props) => {
   return (
     <div className="home-container">
       <div className="picture-container">
-        Bilder
         <DisplayPicture pictureNo={pictureNo} />
       </div>
       <div className="text-container">

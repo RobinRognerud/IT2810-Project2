@@ -30,9 +30,8 @@ const Poetry: React.FC<IPoetryProps> = (props) => {
           setError(error);
         }
       );
-  }, [poems[parseInt(poetryNo)], poetryNo]);
-
-  /* Funker bra uten poems i arrayet, men får feilmelding*/
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [poems[parseInt(poetryNo)]]);
 
   if (error) {
     return <div>Error {error} </div>;
