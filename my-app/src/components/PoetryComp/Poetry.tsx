@@ -38,6 +38,7 @@ const Poetry: React.FC<IPoetryProps> = (props) => {
           setError(error);
         }
       );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [poems[parseInt(poetryNo)]]);
 
   if (error) {
@@ -45,8 +46,8 @@ const Poetry: React.FC<IPoetryProps> = (props) => {
   } else {
     return (
       <div className="poetry">
-        {contents[0].lines.map((line) => (
-          <p>{line}</p>
+        {contents[0].lines.map((line, i) => (
+          <p key={i}>{line}</p>
         ))}
         {/* <div className="poetry">
         {contents2[0].authors.map((author) => (

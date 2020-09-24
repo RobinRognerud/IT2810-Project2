@@ -1,24 +1,28 @@
-h1 {
+.welcome-text {
   outline-style: none;
-  padding-top: 180px;
-  font-size: 600%;
+  padding-top: 150px;
+  font-size: 9vw;
   font-family: American Typewriter, serif;
   color: beige;
+  margin-top: 0;
+  margin-bottom: 10;
 }
 
 .startPage {
   position: relative;
-  height: 700px;
+  height: 90vh;
   background-color: rgb(224, 198, 140);
+  text-align: center;
 }
 
+/* .arrow-div {
+  text-align: center;
+} */
+
 .arrows {
-  width: 60px;
-  height: 72px;
-  position: absolute;
-  left: 50%;
-  margin-left: -30px;
-  bottom: 80px;
+  width: auto;
+  display: block;
+  margin: auto;
 }
 
 .arrows path {
@@ -74,12 +78,6 @@ h1 {
   -webkit-animation-delay: 0s; /* Safari 和 Chrome */
 }
 
-/* .welcome-text {
-  outline-style: "none";
-  position: "absolute";
-  top: "600px";
-  left: "50%";
-  margin-right: "-50%";
-transform: translate(-50%, -50%);
-  font-size: "400%";
-} */
+/* @media only screen and (max-device-width: 480px) {
+}
+ */

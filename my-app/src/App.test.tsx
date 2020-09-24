@@ -1,7 +1,7 @@
 import React from "react";
 import Enzyme from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
-
+import renderer from "react-test-renderer";
 import App from "./App";
 
 Enzyme.configure({ adapter: new Adapter() });
@@ -28,4 +28,21 @@ it("App loads footer correctly", () => {
   const wrapper = Enzyme.mount(<App />);
   const container = wrapper.find("footer");
   expect(container).toBeTruthy();
+});
+
+describe("App", () => {
+  test("loads without error", () => {
+    let element = <App />;
+
+    expect(element).toBeTruthy();
+  });
+});
+
+describe("App", () => {
+  test("render matches snapshot", () => {
+    const component = renderer.create(<App />);
+    const tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
 });
