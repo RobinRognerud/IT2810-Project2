@@ -1,29 +1,21 @@
 import React, { useState, useEffect } from "react";
 
-//Source: https://reactjs.org/docs/faq-ajax.html
-
 interface IPoetryProps {
   poetryNo: string;
-  //authorName: string;
 }
 
 const Poetry: React.FC<IPoetryProps> = (props) => {
-  const [contents, setContents] = useState([{ lines: [""] }]);
-  //const [contents2, setContents2] = useState([{ authors: [""] }]);
+  const [contents, setContents] = useState([
+    { lines: [""], title: "", author: "" },
+  ]);
 
   const [error, setError] = useState(null);
 
   const poems: string[] = [
-    "https://poetrydb.org/author,title/Taylor;Dance/lines.json",
-    "https://poetrydb.org/author,title/Taylor;star/lines.json",
-    "https://poetrydb.org/author,title/Taylor;good-natured/lines.json",
+    "https://poetrydb.org/author,title/Taylor;Dance/lines,title,author.json",
+    "https://poetrydb.org/author,title/Taylor;star/lines,title,author.json",
+    "https://poetrydb.org/author,title/Emily%20Dickinson;Summer%20begins%20to%20have%20the%20look/title,lines,author.json",
   ];
-
-  /*   const author: string[] = [
-    "https://poetrydb.org/author,title/Taylor;Dance/author.json",
-    "https://poetrydb.org/author,title/Taylor;star/author.json",
-    "https://poetrydb.org/author,title/Taylor;good-natured/author.json",
-  ]; */
 
   const poetryNo = props.poetryNo;
 
@@ -38,7 +30,6 @@ const Poetry: React.FC<IPoetryProps> = (props) => {
           setError(error);
         }
       );
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [poems[parseInt(poetryNo)]]);
 
   if (error) {
@@ -46,9 +37,19 @@ const Poetry: React.FC<IPoetryProps> = (props) => {
   } else {
     return (
       <div className="poetry">
-        {contents[0].lines.map((line, i) => (
-          <p key={i}>{line}</p>
-        ))}
+        <div>
+          <p id="title"> {contents[0].title}</p>
+        </div>
+
+        <div>
+          {" "}
+          {contents[0].lines.map((line) => (
+            <p>{line}</p>
+          ))}{" "}
+        </div>
+        <div>
+          <p id="author"> Writen by {contents[0].author}</p>
+        </div>
       </div>
     );
   }
