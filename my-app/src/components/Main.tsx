@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import FavoriteButton from "./FavoriteButton/FavoriteButton";
 import Music from "./MusicComp/Music";
 import MusicOpt from "./MusicComp/MusicOpt";
 import DisplayPicture from "./PictureComp/DisplayPicture";
@@ -8,6 +7,8 @@ import Poetry from "./PoetryComp/Poetry";
 import PoetryOpt from "./PoetryComp/PoetryOpt";
 
 import "../App.css";
+import SaveFavoriteButton from "./FavoriteButton/SaveFavoriteButton";
+import GetFavoriteButton from "./FavoriteButton/GetFavoriteButton";
 
 interface IMainProps {}
 
@@ -80,8 +81,8 @@ const Main: React.FC<IMainProps> = (props) => {
 
         <PoetryOpt updatePoetryNo={updatePoetryNo} poetryNo={poetryNo} />
 
-        <button onClick={getFavorite}>Favorite</button>
-        <FavoriteButton saveFavorite={saveFavorite} />
+        <GetFavoriteButton getFavorite={getFavorite} />
+        <SaveFavoriteButton saveFavorite={saveFavorite} />
       </div>
     </div>
   );

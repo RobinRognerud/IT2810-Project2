@@ -225,16 +225,16 @@ button {
   .options-container,
   .picture-container,
   .text-container {
-    margin: 3%;
+    margin: 3vw;
   }
 }
 
 /*Tablets and laptops*/
-@media screen and (max-device-width: 1180px) {
+@media screen and (max-width: 1180px) {
   .options-container,
   .picture-container,
   .text-container {
-    margin: 3%;
+    margin: 3vw;
   }
 }
 
