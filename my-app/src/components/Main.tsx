@@ -85,8 +85,6 @@ const Main: React.FC<IMainProps> = (props) => {
 
         <br />
         <br />
-      </div>
-      <div className="favorite-button">
         <button onClick={getFavorite}>Favorite</button>
         <FavoriteButton saveFavorite={saveFavorite} />
       </div>
