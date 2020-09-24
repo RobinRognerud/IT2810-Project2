@@ -6,7 +6,7 @@ interface IPoetryProps {
   poetryNo: string;
 }
 
-const Poetry: React.SFC<IPoetryProps> = (props) => {
+const Poetry: React.FC<IPoetryProps> = (props) => {
   const [contents, setContents] = useState([{ lines: [""] }]);
   const [error, setError] = useState(null);
 
@@ -30,7 +30,7 @@ const Poetry: React.SFC<IPoetryProps> = (props) => {
           setError(error);
         }
       );
-      // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [poems[parseInt(poetryNo)]]);
 
   if (error) {
@@ -38,9 +38,10 @@ const Poetry: React.SFC<IPoetryProps> = (props) => {
   } else {
     return (
       <div className="poetry">
-        {contents[0].lines.map((line) => (
-          <p>{line}</p>
+        {contents[0].lines.map((line, i) => (
+          <p key={i}>{line}</p>
         ))}
+        {console.log(contents[0].lines)}
       </div>
     );
   }
