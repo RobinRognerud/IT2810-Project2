@@ -13,7 +13,7 @@ const PictureOpt: React.FC<IPictureOptProps> = ({
     <div id="product-options">
       <div id="picture-category">
         <label>
-          Sun
+          Singing ball
           <input
             className="radio"
             name="pictureNr"
@@ -24,7 +24,7 @@ const PictureOpt: React.FC<IPictureOptProps> = ({
           />
         </label>
         <label>
-          Hat
+          Abstract
           <input
             className="radio"
             name="pictureNr"
@@ -35,7 +35,7 @@ const PictureOpt: React.FC<IPictureOptProps> = ({
           />
         </label>
         <label>
-          Tryllestav
+          Tree
           <input
             className="radio"
             name="pictureNr"
