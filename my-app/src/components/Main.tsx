@@ -7,6 +7,8 @@ import PictureOpt from "./PictureComp/PictureOpt";
 import Poetry from "./PoetryComp/Poetry";
 import PoetryOpt from "./PoetryComp/PoetryOpt";
 
+import "../App.css";
+
 interface IMainProps {}
 
 const Main: React.FC<IMainProps> = (props) => {
@@ -59,7 +61,7 @@ const Main: React.FC<IMainProps> = (props) => {
   };
 
   return (
-    <div className="home-container">
+    <div className="home-container" id="home">
       {/* <div className="gallery"> */}
       <div className="picture-container">
         <DisplayPicture pictureNo={pictureNo} />
