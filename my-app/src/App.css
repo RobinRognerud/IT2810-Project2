@@ -1,27 +1,173 @@
+body {
+  background-color: beige;
+}
+
 .App {
   text-align: center;
+  background-color: rgb(224, 198, 140);
+  margin: 20px;
 }
 
 #header {
-  height: 70px;
+  height: 90px;
   width: 100%;
-  background: grey;
+  background: beige;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.poetry {
+  background-color: rgb(224, 198, 140);
+  width: 400px;
+  height: 350px;
+  overflow: auto;
+  padding-top: 70px;
+}
+
+.music {
+  background-color: rgb(224, 198, 140);
+  width: 400px;
+  height: 120px;
+  padding-bottom: 20;
 }
 
 .home-container {
-  background: #aaa;
-  height: 500px;
-  width: 100%;
+  background: rgb(224, 198, 140);
+  height: 600px;
+  width: 90%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-evenly;
+  padding: 50px;
 }
 
 audio {
-  background-color: #aaa;
-
+  background-color: rgb(224, 198, 140);
   text-indent: 0;
+  border-radius: 0px;
+  padding: 40px;
+}
 
-  border-radius: 5px;
+.footer {
+  background-color: beige;
+  padding: 11px;
+  height: 80px;
+  margin-top: 20px;
+}
+
+.picture-container {
+  background-color: rgb(224, 198, 140);
+  height: 460px;
+  width: 30%;
+}
+
+.options-container {
+  background-color: beige;
+  padding: 10px;
+  height: 460px;
+  border-radius: 8px;
+  border: none;
+}
+
+p {
+  font-family: American Typewriter, serif;
+  font-size: small;
+}
+
+label {
+  font-family: American Typewriter, serif;
+  font-size: small;
+}
+
+#favoriteButton {
+  background-color: black;
+  color: beige;
+  border-radius: 8px;
+  border: none;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-family: American Typewriter, serif;
+}
+
+/* Design av radiobuttons */
+
+@keyframes click-wave {
+  0% {
+    height: 30px;
+    width: 30px;
+    opacity: 0.35;
+    position: relative;
+  }
+  100% {
+    height: 150px;
+    width: 150px;
+    margin-left: -80px;
+    margin-top: -80px;
+    opacity: 0;
+  }
+}
+
+.radio {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  position: relative;
+  top: 13.33333px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 35px;
+  width: 35px;
+  transition: all 0.15s ease-out 0s;
+  background: beige;
+  border-style: inset;
+  color: rgb(240, 74, 74);
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0.5rem;
+  outline: none;
+  position: relative;
+  z-index: 1000;
+}
+.radio:hover {
+  background: rgb(240, 74, 74);
+}
+.radio:checked {
+  background: rgb(224, 198, 140);
+}
+.radio:checked::before {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  content: "❤";
+  display: inline-block;
+  font-size: 26.66667px;
+  text-align: center;
+  line-height: 30px;
+}
+.radio:checked::after {
+  -webkit-animation: click-wave 0.65s;
+  -moz-animation: click-wave 0.65s;
+  animation: click-wave 0.65s;
+  background: rgb(240, 74, 74);
+  content: "";
+  display: block;
+  position: relative;
+  z-index: 100;
+}
+.radio.radio {
+  border-radius: 50%;
+}
+.radio.radio::after {
+  border-radius: 50%;
 }

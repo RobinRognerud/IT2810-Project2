@@ -1,3 +1,17 @@
+h1 {
+  outline-style: none;
+  padding-top: 180px;
+  font-size: 600%;
+  font-family: American Typewriter, serif;
+  color: beige;
+}
+
+.startPage {
+  position: relative;
+  height: 700px;
+  background-color: rgb(224, 198, 140);
+}
+
 .arrows {
   width: 60px;
   height: 72px;
@@ -8,9 +22,9 @@
 }
 
 .arrows path {
-  stroke: #2994d1;
+  stroke: beige;
   fill: transparent;
-  stroke-width: 1px;
+  stroke-width: 3px;
   animation: arrow 2s infinite;
   -webkit-animation: arrow 2s infinite;
 }

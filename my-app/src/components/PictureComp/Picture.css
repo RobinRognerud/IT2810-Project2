@@ -1,8 +1,16 @@
 .Svg {
-  height: 400px;
+  height: 200px;
   animation: spinn 10s infinite linear;
-  margin-bottom: 70px;
-  margin-top: 50px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  background-color: transparent;
+}
+
+#product-options {
+  background-color: beige;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
 }
 
 @keyframes spinn {

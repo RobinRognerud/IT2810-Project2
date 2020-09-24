@@ -25,7 +25,7 @@ const Music: React.FC<IMusicProps> = (props) => {
   };
 
   return (
-    <div>
+    <div className="music">
       <audio controls src={music()}></audio>
     </div>
   );

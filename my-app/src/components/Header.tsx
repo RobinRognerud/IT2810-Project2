@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 export default class Header extends Component {
-    render() {
-        return <div id="header">Tittel</div>
-    }
+  render() {
+    return <div id="header"></div>;
+  }
 }

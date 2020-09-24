@@ -47,15 +47,15 @@ const Main: React.FC<IMainProps> = (props) => {
   return (
     <div className="home-container">
       <div className="picture-container">
-        Bilder
         <DisplayPicture pictureNo={pictureNo} />
       </div>
       <div className="text-container">
-        Dikt + lyd
         <Poetry poetryNo={poetryNo} />
         <Music musicNo={musicNo} />
       </div>
       <div className="options-container">
+        <p> Make your own art by changing image, music and poetry:</p>
+        <br />
         <PictureOpt updatePictureNo={updatePictureNo} pictureNo={pictureNo} />
         <br />
         <br />
