@@ -12,15 +12,15 @@ interface IMainProps {}
 const Main: React.FC<IMainProps> = (props) => {
   /*Initialize radiobutton values to 0 if nothing is saved in localstorage*/
   const [pictureNo, setPictureNo] = useState(
-    localStorage.getItem("LocalStoragePictureNo") || "0"
+    sessionStorage.getItem("SessionStoragePictureNo") || "0"
   );
 
   const [musicNo, setMusicNo] = useState(
-    localStorage.getItem("LocalStorageMusicNo") || "0"
+    sessionStorage.getItem("SessionStorageMusicNo") || "0"
   );
 
   const [poetryNo, setPoetryNo] = useState(
-    localStorage.getItem("LocalStoragePoetryNo") || "0"
+    sessionStorage.getItem("SessionStoragePoetryNo") || "0"
   );
 
   /* Save the radiobutton values to localstorage after favoritebutton is clicked */
@@ -32,17 +32,30 @@ const Main: React.FC<IMainProps> = (props) => {
 
   /* Update pictureNo after a radiobutton is clicked */
   const updatePictureNo = (e: React.ChangeEvent<HTMLInputElement>) => {
+    sessionStorage.setItem("SessionStoragePictureNo", e.target.value);
     setPictureNo(e.target.value);
   };
 
   /* Update musicNo after a radiobutton is clicked */
   const updateMusicNo = (e: React.ChangeEvent<HTMLInputElement>) => {
+    sessionStorage.setItem("SessionStorageMusicNo", e.target.value);
     setMusicNo(e.target.value);
   };
 
   /* Update poetryNo after a radiobutton is clicked */
   const updatePoetryNo = (e: React.ChangeEvent<HTMLInputElement>) => {
+    sessionStorage.setItem("SessionStoragePoetryNo", e.target.value);
     setPoetryNo(e.target.value);
+  };
+
+  const getFavorite = () => {
+    const pictureNo = localStorage.getItem("LocalStoragePictureNo") || "0";
+    const musicNo = localStorage.getItem("LocalStorageMusicNo") || "0";
+    const poetryNo = localStorage.getItem("LocalStoragePoetryNo") || "0";
+
+    setPictureNo(pictureNo);
+    setMusicNo(musicNo);
+    setPoetryNo(poetryNo);
   };
 
   return (
@@ -75,6 +88,7 @@ const Main: React.FC<IMainProps> = (props) => {
         <br />
       </div>
       <div className="favorite-button">
+        <button onClick={getFavorite}>Favorite</button>
         <FavoriteButton saveFavorite={saveFavorite} />
       </div>
     </div>
