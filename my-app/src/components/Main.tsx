@@ -81,8 +81,8 @@ const Main: React.FC<IMainProps> = (props) => {
 
         <PoetryOpt updatePoetryNo={updatePoetryNo} poetryNo={poetryNo} />
 
-        <GetFavoriteButton getFavorite={getFavorite} />
         <SaveFavoriteButton saveFavorite={saveFavorite} />
+        <GetFavoriteButton getFavorite={getFavorite} />
       </div>
     </div>
   );

@@ -9,8 +9,9 @@ const SaveFavoriteButton: React.FC<ISaveFavoriteButtonProps> = ({
 }) => {
   return (
     <div>
+      <p>Lagre din favoritt utstillingen til neste gang!</p>
       <button id="favoriteButton" onClick={saveFavorite}>
-        Hent favoritt
+        Lagre utstilling
       </button>
     </div>
   );
