@@ -2,12 +2,18 @@ import React from "react";
 import "./App.css";
 import "./StartPage.css";
 import Main from "./components/Main";
-import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { ThemeProvider, useTheme } from "./components/ThemeContext";
 
+const helloRef = React.createRef<HTMLDivElement>();
+
+const scroll = () => {
+  if (helloRef && helloRef.current) {
+    helloRef.current.scrollIntoView();
+  }
+};
+
 function App() {
-  const helloRef = React.createRef<HTMLDivElement>();
   return (
     <div className="App">
       <ThemeProvider>
@@ -17,13 +23,7 @@ function App() {
           <div className="arrow-div">
             {" "}
             <svg className="arrows">
-              <g
-                onClick={() => {
-                  if (helloRef && helloRef.current) {
-                    helloRef.current.scrollIntoView();
-                  }
-                }}
-              >
+              <g onClick={scroll}>
                 <path className="a1" d="M0 0 L30 32 L60 0"></path>
                 <path className="a2" d="M0 20 L30 52 L60 20"></path>
                 <path className="a3" d="M0 40 L30 72 L60 40"></path>
@@ -31,7 +31,6 @@ function App() {
             </svg>
           </div>
         </div>
-        <Header />
         <div ref={helloRef}>
           <Main />
         </div>
