@@ -1,15 +1,34 @@
+.welcome-text {
+  outline-style: none;
+  padding-top: 150px;
+  font-size: 9vw;
+  font-family: American Typewriter, serif;
+  color: beige;
+  margin-top: 0;
+  margin-bottom: 10;
+}
+
+.startPage {
+  position: relative;
+  height: 90vh;
+  background-color: rgb(224, 198, 140);
+  text-align: center;
+}
+
+/* .arrow-div {
+  text-align: center;
+} */
+
 .arrows {
-  width: 60px;
-  height: 72px;
-  left: 50%;
-  margin-left: -30px;
-  bottom: 80px;
+  width: auto;
+  display: block;
+  margin: auto;
 }
 
 .arrows path {
-  stroke: #2994d1;
+  stroke: beige;
   fill: transparent;
-  stroke-width: 1px;
+  stroke-width: 3px;
   animation: arrow 2s infinite;
   -webkit-animation: arrow 2s infinite;
 }
@@ -59,22 +78,6 @@
   -webkit-animation-delay: 0s; /* Safari 和 Chrome */
 }
 
-.welcome-text {
-  outline-style: none;
-  font-size: 7vw;
-  margin: auto;
-  margin-bottom: 400px;
+/* @media only screen and (max-device-width: 480px) {
 }
-
-@media only screen and (max-device-width: 480px) {
-}
-
-/* .welcome-text {
-  outline-style: "none";
-  position: "absolute";
-  top: "600px";
-  left: "50%";
-  margin-right: "-50%";
-transform: translate(-50%, -50%);
-  font-size: "400%";
-} */
+ */

@@ -1,5 +1,5 @@
-.App {
-  text-align: center;
+body {
+  background-color: beige;
 }
 
 #groupNr {
@@ -7,16 +7,79 @@
 }
 
 #header {
-  height: 10%;
+  height: 90px;
   width: 100%;
-  background: grey;
-  font-size: 9vw;
+  background: beige;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.poetry {
+  overflow: scroll;
+  height: 40vh;
+  width: 100%;
+  margin-top: 15%;
+  padding-top: 10%;
+  margin-right: 10%;
+}
+
+.music {
+  padding-top: 10%;
 }
 
 .home-container {
-  background: #aaa;
+  background: rgb(224, 198, 140);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 2%;
+  font-size: 6vw;
+}
+/* 
+.gallery {
+  background-color: beige;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  border-radius: 8px;
+  border: none;
+  text-align: center;
+  width: auto;
+} */
+
+.options-container {
+  background-color: beige;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  text-align: center;
+}
+.text-container {
+  background-color: beige;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  text-align: center;
+}
+
+.picture-container {
+  background-color: beige;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  text-align: center;
+  padding: 10% 5% 0 5%;
+}
+
+/*Robin responsive*/
+/* .home-container {
+  background-color: beige;
   margin: auto;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   height: 100%;
   width: 100%;
   display: grid;
@@ -25,25 +88,130 @@
 .picture-container {
   grid-row: 1/2;
   grid-column: 1/2;
-}
+} */
 
 .Svg {
   max-width: 100%;
   height: auto;
 }
 
-
 audio {
+  text-indent: 0;
+  border-radius: 0px;
+}
+
+.footer {
+  background-color: beige;
+  padding: 11px;
+  height: 80px;
+  margin-top: 20px;
+}
+
+p {
+  font-family: American Typewriter, serif;
+  font-size: small;
+}
+
+label {
+  font-family: American Typewriter, serif;
+  font-size: small;
+}
+
+#favoriteButton,
+button {
+  background-color: black;
+  color: beige;
+  border-radius: 8px;
+  border: none;
+  padding: 3%;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: American Typewriter, serif;
+}
+
+/* Design av radiobuttons */
+
+@keyframes click-wave {
+  0% {
+    height: 30px;
+    width: 30px;
+    opacity: 0.35;
+    position: relative;
+  }
+  100% {
+    height: 150px;
+    width: 150px;
+    margin-left: -80px;
+    margin-top: -80px;
+    opacity: 0;
+  }
+}
+
+.radio {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+
+  top: 13.33333px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 4vh;
+  width: 4vw;
+  transition: all 0.15s ease-out 0s;
+  background: beige;
+  border-style: inset;
+  color: rgb(240, 74, 74);
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0.5rem;
+  outline: none;
+  position: relative;
+  z-index: 1000;
+}
+.radio:hover {
+  background: rgb(240, 74, 74);
+}
+.radio:checked {
+  background: rgb(224, 198, 140);
+}
+.radio:checked::before {
+  height: 10%;
+  width: 10%;
+  position: absolute;
+  content: "❤";
+  display: inline-block;
+  font-size: 220%;
+  text-align: center;
+}
+.radio:checked::after {
+  -webkit-animation: click-wave 0.65s;
+  -moz-animation: click-wave 0.65s;
+  animation: click-wave 0.65s;
+  background: rgb(240, 74, 74);
+  content: "";
+  display: block;
+  position: relative;
+  z-index: 100;
+  position: relative;
+}
+.radio.radio {
+  border-radius: 50%;
+}
+.radio.radio::after {
+  border-radius: 50%;
   background-color: #aaa;
   text-indent: 0;
   border-radius: 5px;
 }
 
-
 /*Media queries for responsivitet*/
 
 /*Tablets and laptops*/
-@media only screen and (max-device-width: 800px) {
+/* @media only screen and (max-device-width: 800px) {
   .home-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -62,26 +230,32 @@ audio {
     grid-row: 3/4;
   }
 
-
   .footer {
     font-size: 3vw;
   }
-
 
   .Svg {
     max-height: 200px;
   }
 
-
   audio {
     width: 60vw;
   }
-}
+} */
 
 /* Mobile enheter */
-@media only screen and (max-device-width: 480px) {
-  .home-container {
-    font-size: 7vw;
+@media screen and (max-device-width: 480px) {
+  .options-container,
+  .picture-container,
+  .text-container {
+    margin: 3%;
   }
+}
 
+@media screen and (max-device-width: 1180px) {
+  .options-container,
+  .picture-container,
+  .text-container {
+    margin: 3%;
+  }
 }

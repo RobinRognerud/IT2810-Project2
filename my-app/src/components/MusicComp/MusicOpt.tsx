@@ -10,8 +10,9 @@ const MusicOpt: React.FC<IMusicOptProps> = ({ musicNo, updateMusicNo }) => {
     <div id="product-options">
       <div id="music-category">
         <label>
-          Choice 1:
+          Music1:
           <input
+            className="radio"
             name="musicNr"
             type="radio"
             value="0"
@@ -20,8 +21,9 @@ const MusicOpt: React.FC<IMusicOptProps> = ({ musicNo, updateMusicNo }) => {
           />
         </label>
         <label>
-          Choice 2:
+          Music2:
           <input
+            className="radio"
             name="musicNr"
             type="radio"
             value="1"
@@ -30,8 +32,9 @@ const MusicOpt: React.FC<IMusicOptProps> = ({ musicNo, updateMusicNo }) => {
           />
         </label>
         <label>
-          Choice 3:
+          Music3:
           <input
+            className="radio"
             name="musicNr"
             type="radio"
             value="2"

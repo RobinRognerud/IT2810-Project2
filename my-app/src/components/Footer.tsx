@@ -5,7 +5,7 @@ export default class Footer extends Component {
     return (
       <footer>
         <div className="footer">
-          <h1>Laget av oss :D </h1>
+          <p></p>
         </div>
       </footer>
     );

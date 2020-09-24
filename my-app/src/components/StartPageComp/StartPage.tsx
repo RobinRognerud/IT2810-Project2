@@ -6,12 +6,11 @@ export default class Hello extends React.Component<{}> {
 
   public render() {
     return (
-      <div>
-        <div>
-          <h1 className="welcome-text">
-            Welcome to our gallery
-          </h1>
-          {/* https://codepen.io/postor/pen/mskxI */}
+      <div className="startPage">
+        <h1 className="welcome-text">Welcome to our gallery</h1>
+        {/* https://codepen.io/postor/pen/mskxI */}
+        <div className="arrow-div">
+          {" "}
           <svg className="arrows">
             <g
               onClick={() => {
@@ -26,6 +25,7 @@ export default class Hello extends React.Component<{}> {
             </g>
           </svg>
         </div>
+
         <div>
           <div ref={this.helloRef}></div>
         </div>

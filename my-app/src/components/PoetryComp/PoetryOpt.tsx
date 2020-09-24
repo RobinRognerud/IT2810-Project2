@@ -10,8 +10,9 @@ const PoetryOpt: React.FC<IPoetryOptProps> = ({ poetryNo, updatePoetryNo }) => {
     <div id="product-options">
       <div id="poetry-category">
         <label>
-          Choice 1:
+          Dance
           <input
+            className="radio"
             name="poetryNr"
             type="radio"
             value="0"
@@ -20,8 +21,9 @@ const PoetryOpt: React.FC<IPoetryOptProps> = ({ poetryNo, updatePoetryNo }) => {
           />
         </label>
         <label>
-          Choice 2:
+          Little star
           <input
+            className="radio"
             name="poetryNr"
             type="radio"
             value="1"
@@ -30,8 +32,9 @@ const PoetryOpt: React.FC<IPoetryOptProps> = ({ poetryNo, updatePoetryNo }) => {
           />
         </label>
         <label>
-          Choice 3:
+          Two good little
           <input
+            className="radio"
             name="poetryNr"
             type="radio"
             value="2"

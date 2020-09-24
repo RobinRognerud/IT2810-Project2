@@ -60,31 +60,24 @@ const Main: React.FC<IMainProps> = (props) => {
 
   return (
     <div className="home-container">
+      {/* <div className="gallery"> */}
       <div className="picture-container">
         <DisplayPicture pictureNo={pictureNo} />
       </div>
       <div className="text-container">
-        Dikt + lyd
         <Poetry poetryNo={poetryNo} />
         <Music musicNo={musicNo} />
       </div>
+      {/* </div> */}
       <div className="options-container">
-        <div className="pictureOptions">
-          <PictureOpt updatePictureNo={updatePictureNo} pictureNo={pictureNo} />
-        </div>
-        <br />
-        <br />
-        <div className="musicOptions">
-          <MusicOpt updateMusicNo={updateMusicNo} musicNo={musicNo} />
-        </div>
-        <br />
-        <br />
-        <div className="poetryOptions">
-          <PoetryOpt updatePoetryNo={updatePoetryNo} poetryNo={poetryNo} />
-        </div>
+        <p> Make your own art by changing image, music and poetry:</p>
 
-        <br />
-        <br />
+        <PictureOpt updatePictureNo={updatePictureNo} pictureNo={pictureNo} />
+
+        <MusicOpt updateMusicNo={updateMusicNo} musicNo={musicNo} />
+
+        <PoetryOpt updatePoetryNo={updatePoetryNo} poetryNo={poetryNo} />
+
         <button onClick={getFavorite}>Favorite</button>
         <FavoriteButton saveFavorite={saveFavorite} />
       </div>
