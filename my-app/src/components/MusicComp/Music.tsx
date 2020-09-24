@@ -1,7 +1,7 @@
 import React from "react";
-import music1 from "../../media/music/Prologue.mp3";
-import music2 from "../../media/music/ChristmasAtHogwarts.mp3";
-import music3 from "../../media/music/HarryWondrousWorld.mp3";
+import music1 from "../../media/music/happyBall.mp3";
+import music2 from "../../media/music/powerful.mp3";
+import music3 from "../../media/music/trees.mp3";
 
 interface IMusicProps {
   musicNo: string;
