@@ -16,6 +16,8 @@ html {
   scroll-behavior: smooth;
 }
 
+/* ----- POETRY ------- */
+
 .poetry {
   overflow: scroll;
   height: 40vh;
@@ -23,6 +25,17 @@ html {
   margin-top: 15%;
   padding-top: 10%;
   margin-right: 10%;
+}
+
+#author {
+  font-family: cursive;
+  font-size: 15%;
+  margin-top: 8%;
+}
+
+#title {
+  font-style: initial;
+  font-size: 25%;
 }
 
 .music {
