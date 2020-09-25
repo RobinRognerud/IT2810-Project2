@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -16,8 +20,6 @@
     "jsx": "react"
   },
   "include": [
-    "src",
-    "../../../React-experimenting/DropDown",
-    "../../../React-experimenting/my-experiment-react/src/components/PictureOptions.tsx"
+    "src"
   ]
 }

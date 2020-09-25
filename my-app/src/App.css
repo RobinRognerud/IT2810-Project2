@@ -10,21 +10,47 @@ body {
   --color: #343434;
 }
 
-#groupNr {
-  font-size: 4vw;
-}
-
-#header {
-  height: 90px;
-  width: 100%;
-  background: beige;
-}
-
 html {
   scroll-behavior: smooth;
 }
 
-/* ----- POETRY ------- */
+.Svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ------ Text ------ */
+
+p {
+  font-family: American Typewriter, serif;
+  font-size: 15px;
+}
+
+label {
+  font-family: American Typewriter, serif;
+  font-size: 15px;
+}
+
+#option-text {
+  font-weight: bold;
+}
+
+#favorite-text {
+  margin-top: 40px;
+  font-weight: bold;
+}
+
+#author {
+  font-family: cursive;
+  font-size: 15px;
+  margin-top: 8%;
+}
+
+#title {
+  font-style: initial;
+  font-size: 20px;
+}
+/* ----- Poetry ------- */
 
 .poetry {
   overflow: scroll;
@@ -35,21 +61,16 @@ html {
   margin-right: 10%;
 }
 
-#author {
-  font-family: cursive;
-  font-size: 15%;
-  margin-top: 8%;
-}
-
-#title {
-  font-style: initial;
-  font-size: 25%;
-}
-
+/* ------- Music -------- */
 .music {
   padding-top: 10%;
 }
+audio {
+  text-indent: 0;
+  border-radius: 0px;
+}
 
+/* ------- Containers main ------- */
 .home-container {
   background-color: var(--background-color);
   display: flex;
@@ -67,6 +88,7 @@ html {
   border: none;
   text-align: center;
 }
+
 .text-container {
   background-color: beige;
   padding: 10px;
@@ -81,19 +103,10 @@ html {
   border-radius: 8px;
   border: none;
   text-align: center;
-  padding: 10% 5% 0 5%;
+  padding: 5% 5% 0 5%;
 }
 
-.Svg {
-  max-width: 100%;
-  height: auto;
-}
-
-audio {
-  text-indent: 0;
-  border-radius: 0px;
-}
-
+/* ------ Other ----- */
 .footer {
   background-color: var(--background-color);
   padding: 11px;
@@ -101,17 +114,23 @@ audio {
   margin-top: 20px;
 }
 
-p {
-  font-family: American Typewriter, serif;
-  font-size: small;
+.darkmode-container {
+  text-align: center;
+}
+.FavoriteButton-container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
 }
 
-label {
-  font-family: American Typewriter, serif;
-  font-size: small;
+/* ------- Buttons ------ */
+
+.darkmodeButton {
+  position: relative;
+  text-align: center;
 }
 
-#favoriteButton,
+.favoriteButton,
 button {
   background-color: black;
   color: beige;
@@ -134,10 +153,6 @@ button {
   text-decoration: none;
   cursor: pointer;
   font-family: American Typewriter, serif;
-}
-
-.page-container {
-  text-align: center;
 }
 
 /* Design av radiobuttons */
@@ -169,8 +184,8 @@ button {
   right: 0;
   bottom: 0;
   left: 0;
-  height: 4vh;
-  width: 4vw;
+  height: 30px;
+  width: 30px;
   transition: all 0.15s ease-out 0s;
   background: beige;
   border-style: inset;
@@ -194,7 +209,7 @@ button {
   position: absolute;
   content: "❤";
   display: inline-block;
-  font-size: 220%;
+  font-size: 180%;
   text-align: center;
 }
 .radio:checked::after {
@@ -218,6 +233,82 @@ button {
   border-radius: 5px;
 }
 
+/* --------- Startpage -------- */
+.welcome-text {
+  outline-style: none;
+  padding-top: 20vh;
+  font-size: 9vw;
+  font-family: American Typewriter, serif;
+  color: beige;
+  margin-top: 0;
+}
+
+.startPage {
+  position: relative;
+  height: 100vh;
+  background-color: var(--background-color);
+  text-align: center;
+}
+
+.arrows {
+  width: 60px;
+  display: block;
+  margin: auto;
+}
+
+.arrows path {
+  stroke: beige;
+  fill: transparent;
+  stroke-width: 3px;
+  animation: arrow 2s infinite;
+  -webkit-animation: arrow 2s infinite;
+}
+
+@keyframes arrow {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/ {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.arrows path.a1 {
+  animation-delay: -1s;
+  -webkit-animation-delay: -1s; /* Safari 和 Chrome */
+}
+
+.arrows path.a2 {
+  animation-delay: -0.5s;
+  -webkit-animation-delay: -0.5s; /* Safari 和 Chrome */
+}
+
+.arrows path.a3 {
+  animation-delay: 0s;
+  -webkit-animation-delay: 0s; /* Safari 和 Chrome */
+}
+
 /*Media queries for responsivitet*/
 
 /* Mobile enheter */
@@ -227,10 +318,59 @@ button {
   .text-container {
     margin: 3vw;
   }
+  #picture-category,
+  #poetry-category,
+  #music-category {
+    padding-bottom: 10px;
+  }
+  #author {
+    font-size: 15px;
+  }
+  #title {
+    font-size: 20px;
+  }
+  .radio {
+    margin-right: 8px;
+    width: 25px;
+    height: 25px;
+  }
+  .radio:checked::before {
+    font-size: 150%;
+  }
+  svg {
+    margin-bottom: 7%;
+  }
+}
+
+/* Liggende mobil */
+@media screen and (max-height: 420px) {
+  .home-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .picture-container {
+    width: 200px;
+  }
+  .text-container {
+    width: 240px;
+  }
+  .options-container,
+  .picture-container,
+  .text-container {
+    margin: 3vw;
+  }
+  .welcome-text {
+    font-size: 4vw;
+  }
+  audio {
+    width: 220px;
+  }
 }
 
 /*Tablets and laptops*/
-@media screen and (max-width: 1180px) {
+@media screen and (max-width: 1300px) {
   .options-container,
   .picture-container,
   .text-container {
@@ -239,9 +379,8 @@ button {
   .arrow-div {
     margin-top: 20vh;
   }
-}
-
-.darkmodeButton {
-  position: relative;
-  text-align: center;
+  svg {
+    margin-top: 0px;
+    padding-bottom: 40px;
+  }
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Music from "./MusicComp/Music";
 import MusicOpt from "./MusicComp/MusicOpt";
 import DisplayPicture from "./PictureComp/DisplayPicture";
@@ -13,6 +13,12 @@ import GetFavoriteButton from "./FavoriteButton/GetFavoriteButton";
 interface IMainProps {}
 
 const Main: React.FC<IMainProps> = (props) => {
+  const poems: string[] = [
+    "https://poetrydb.org/author,title/Taylor;Dance/lines,title,author.json",
+    "https://poetrydb.org/author,title/Taylor;star/lines,title,author.json",
+    "https://poetrydb.org/author,title/Emily%20Dickinson;Summer%20begins%20to%20have%20the%20look/title,lines,author.json",
+  ];
+
   /*Initialize radiobutton values to 0 if nothing is saved in localstorage*/
   const [pictureNo, setPictureNo] = useState(
     sessionStorage.getItem("SessionStoragePictureNo") || "0"
@@ -25,6 +31,13 @@ const Main: React.FC<IMainProps> = (props) => {
   const [poetryNo, setPoetryNo] = useState(
     sessionStorage.getItem("SessionStoragePoetryNo") || "0"
   );
+
+  /*Sets the poetry to be fetched from Poetry.tsx*/
+  const [poetry, setPoertry] = useState(poems[parseInt(poetryNo)]);
+
+  useEffect(() => {
+    setPoertry(poems[parseInt(poetryNo)]);
+  }, [poems, poetryNo]);
 
   /* Save the radiobutton values to localstorage after favoritebutton is clicked */
   const saveFavorite = () => {
@@ -68,12 +81,15 @@ const Main: React.FC<IMainProps> = (props) => {
         <DisplayPicture pictureNo={pictureNo} />
       </div>
       <div className="text-container">
-        <Poetry poetryNo={poetryNo} />
+        <Poetry poetry={poetry} />
         <Music musicNo={musicNo} />
       </div>
       {/* </div> */}
       <div className="options-container">
-        <p> Make your own art by changing image, music and poetry:</p>
+        <p id="option-text">
+          {" "}
+          Make your own art by changing image, music and poetry:
+        </p>
 
         <PictureOpt updatePictureNo={updatePictureNo} pictureNo={pictureNo} />
 
@@ -81,8 +97,9 @@ const Main: React.FC<IMainProps> = (props) => {
 
         <PoetryOpt updatePoetryNo={updatePoetryNo} poetryNo={poetryNo} />
 
-        <GetFavoriteButton getFavorite={getFavorite} />
+        <p id="favorite-text">Save your favoirte art:</p>
         <SaveFavoriteButton saveFavorite={saveFavorite} />
+        <GetFavoriteButton getFavorite={getFavorite} />
       </div>
     </div>
   );
