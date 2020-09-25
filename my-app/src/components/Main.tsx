@@ -73,7 +73,10 @@ const Main: React.FC<IMainProps> = (props) => {
       </div>
       {/* </div> */}
       <div className="options-container">
-        <p> Make your own art by changing image, music and poetry:</p>
+        <p id="option-text">
+          {" "}
+          Make your own art by changing image, music and poetry:
+        </p>
 
         <PictureOpt updatePictureNo={updatePictureNo} pictureNo={pictureNo} />
 
@@ -81,6 +84,9 @@ const Main: React.FC<IMainProps> = (props) => {
 
         <PoetryOpt updatePoetryNo={updatePoetryNo} poetryNo={poetryNo} />
 
+        <p id="favorite-text">
+          Lagre din favoritt utstillingen til neste gang!
+        </p>
         <SaveFavoriteButton saveFavorite={saveFavorite} />
         <GetFavoriteButton getFavorite={getFavorite} />
       </div>
