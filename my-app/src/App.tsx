@@ -1,6 +1,5 @@
 import React from "react";
 import "./App.css";
-import "./StartPage.css";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
 import { ThemeProvider, useTheme } from "./components/ThemeContext";
@@ -34,7 +33,7 @@ function App() {
         <div ref={helloRef}>
           <Main />
         </div>
-        <div className="page-container">
+        <div className="darkmode-container">
           <DarkmodeButton />
         </div>
         <Footer />
