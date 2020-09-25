@@ -10,16 +10,6 @@ body {
   --color: #343434;
 }
 
-#groupNr {
-  font-size: 4vw;
-}
-
-#header {
-  height: 90px;
-  width: 100%;
-  background: beige;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -37,13 +27,22 @@ html {
 
 #author {
   font-family: cursive;
-  font-size: 15%;
+  font-size: 15px;
   margin-top: 8%;
 }
 
 #title {
   font-style: initial;
-  font-size: 25%;
+  font-size: 20px;
+}
+
+#favorite-text {
+  margin-top: 40px;
+  font-weight: bold;
+}
+
+#option-text {
+  font-weight: bold;
 }
 
 .music {
@@ -103,12 +102,12 @@ audio {
 
 p {
   font-family: American Typewriter, serif;
-  font-size: small;
+  font-size: 15px;
 }
 
 label {
   font-family: American Typewriter, serif;
-  font-size: small;
+  font-size: 15px;
 }
 
 #favoriteButton,
@@ -169,8 +168,8 @@ button {
   right: 0;
   bottom: 0;
   left: 0;
-  height: 4vh;
-  width: 4vw;
+  height: 30px;
+  width: 30px;
   transition: all 0.15s ease-out 0s;
   background: beige;
   border-style: inset;
@@ -194,7 +193,7 @@ button {
   position: absolute;
   content: "❤";
   display: inline-block;
-  font-size: 220%;
+  font-size: 180%;
   text-align: center;
 }
 .radio:checked::after {
@@ -226,6 +225,44 @@ button {
   .picture-container,
   .text-container {
     margin: 3vw;
+  }
+  p,
+  #author {
+    font-size: 15px;
+  }
+  #title {
+    font-size: 20px;
+  }
+  .radio {
+    margin-right: 8px;
+    width: 25px;
+    height: 25px;
+  }
+  .radio:checked::before {
+    font-size: 150%;
+  }
+  #saveFavoriteButton {
+    margin-bottom: 15px;
+  }
+}
+
+/* Liggende mobil */
+@media screen and (max-height: 480px) {
+  .home-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .picture-container {
+    width: 250px;
+  }
+  p,
+  #author {
+    font-size: 15px;
+  }
+  #title {
+    font-size: 20px;
   }
 }
 
