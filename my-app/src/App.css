@@ -266,6 +266,31 @@ button {
   }
 }
 
+@media screen and (max-height: 420px) {
+  .home-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .picture-container {
+    width: 200px;
+  }
+  .text-container {
+    width: 240px;
+  }
+  audio {
+    width: 220px;
+  }
+  p,
+  #author {
+    font-size: 15px;
+  }
+  #title {
+    font-size: 20px;
+  }
+}
+
 /*Tablets and laptops*/
 @media screen and (max-width: 1180px) {
   .options-container,
