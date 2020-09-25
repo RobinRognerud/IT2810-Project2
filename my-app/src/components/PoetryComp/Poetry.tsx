@@ -42,7 +42,7 @@ const Poetry: React.FC<IPoetryProps> = (props) => {
           ))}{" "}
         </div>
         <div>
-          <p id="author"> Writen by {contents[0].author}</p>
+          <p id="author"> Written by {contents[0].author}</p>
         </div>
       </div>
     );
