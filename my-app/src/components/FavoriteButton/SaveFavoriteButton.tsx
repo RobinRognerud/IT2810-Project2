@@ -10,7 +10,7 @@ const SaveFavoriteButton: React.FC<ISaveFavoriteButtonProps> = ({
   return (
     <div id="saveFavoriteButton">
       <button id="favoriteButton" onClick={saveFavorite}>
-        Lagre utstilling
+        Save favorite ❤
       </button>
     </div>
   );

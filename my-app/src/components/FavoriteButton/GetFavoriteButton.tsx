@@ -10,7 +10,7 @@ const GetFavoriteButton: React.FC<IGetFavoriteButtonProps> = ({
   return (
     <div>
       <button id="favoriteButton" onClick={getFavorite}>
-        Hent favoritt
+        Get favorite ❤
       </button>
     </div>
   );
