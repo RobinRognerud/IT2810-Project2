@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 interface IPoetryProps {
-  poetryNo: string;
+  poetry: string;
 }
 
 const Poetry: React.FC<IPoetryProps> = (props) => {
@@ -11,16 +11,10 @@ const Poetry: React.FC<IPoetryProps> = (props) => {
 
   const [error, setError] = useState(null);
 
-  const poems: string[] = [
-    "https://poetrydb.org/author,title/Taylor;Dance/lines,title,author.json",
-    "https://poetrydb.org/author,title/Taylor;star/lines,title,author.json",
-    "https://poetrydb.org/author,title/Emily%20Dickinson;Summer%20begins%20to%20have%20the%20look/title,lines,author.json",
-  ];
-
-  const poetryNo = props.poetryNo;
+  const poetry = props.poetry;
 
   useEffect(() => {
-    fetch(poems[parseInt(poetryNo)])
+    fetch(poetry)
       .then((response) => response.json())
       .then(
         (data) => {
@@ -30,7 +24,7 @@ const Poetry: React.FC<IPoetryProps> = (props) => {
           setError(error);
         }
       );
-  }, [poems[parseInt(poetryNo)]]);
+  }, [poetry]);
 
   if (error) {
     return <div>Error {error} </div>;
