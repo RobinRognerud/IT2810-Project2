@@ -97,7 +97,7 @@ const Main: React.FC<IMainProps> = (props) => {
 
         <PoetryOpt updatePoetryNo={updatePoetryNo} poetryNo={poetryNo} />
 
-        <p id="favorite-text">Save your favoirte art:</p>
+        <p id="favorite-text">Save your favorite art:</p>
         <SaveFavoriteButton saveFavorite={saveFavorite} />
         <GetFavoriteButton getFavorite={getFavorite} />
       </div>
