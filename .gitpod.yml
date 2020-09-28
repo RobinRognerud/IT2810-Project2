@@ -1,0 +1,4 @@
+tasks:
+  - before: cd my-app
+    init: npm install && npm install typescript 
+    command: npm start
