@@ -37,8 +37,8 @@ const Poetry: React.FC<IPoetryProps> = (props) => {
 
         <div>
           {" "}
-          {contents[0].lines.map((line) => (
-            <p>{line}</p>
+          {contents[0].lines.map((line, i) => (
+            <p key={i}>{line}</p>
           ))}{" "}
         </div>
         <div>

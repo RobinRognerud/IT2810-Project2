@@ -1,4 +1,6 @@
 import React from "react";
+/*Guide for dark mode with context
+https://www.carlrippon.com/implementing-dark-mode-in-a-react-app-with-css-properties/?fbclid=IwAR3_t4X7XPKqFqjzdjMogefU3GFyFL7HiczJQcUBEuM6I4vMWmEsceTLzss*/
 
 const themeColours = {
   light: {
@@ -16,6 +18,7 @@ type ThemeContextType = {
   theme: ThemeName;
   setTheme: (name: ThemeName) => void;
 };
+
 const ThemeContext = React.createContext<ThemeContextType>(undefined!);
 
 type Props = {
@@ -24,11 +27,6 @@ type Props = {
 
 export const ThemeProvider = ({ children }: Props) => {
   const [themeName, setThemeName] = React.useState<ThemeName>("light");
-
-  React.useEffect(() => {
-    const darkOS = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    setTheme(darkOS ? "dark" : "light");
-  }, []);
 
   const setTheme = (name: ThemeName) => {
     document.body.style.setProperty("--color", themeColours[name].color);

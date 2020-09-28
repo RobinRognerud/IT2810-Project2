@@ -12,6 +12,8 @@ const PictureOpt: React.FC<IPictureOptProps> = ({
   return (
     <div id="product-options">
       <div id="picture-category">
+        <p id="titleRB">Picture:</p>
+
         <label>
           Singing ball
           <input

@@ -19,11 +19,20 @@ html {
   height: auto;
 }
 
+#poetry-category,
+#picture-category,
+#music-category {
+  display: flex;
+  padding-bottom: 10px;
+  margin: 30px;
+}
+
 /* ------ Text ------ */
 
 p {
   font-family: American Typewriter, serif;
   font-size: 15px;
+  margin: 0px;
 }
 
 label {
@@ -33,10 +42,13 @@ label {
 
 #option-text {
   font-weight: bold;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
 }
 
 #favorite-text {
   margin-top: 40px;
+  margin-bottom: 2vh;
   font-weight: bold;
 }
 
@@ -144,8 +156,8 @@ button {
 }
 
 #darkmodeButton {
-  background-color: black;
-  color: beige;
+  background-color: beige;
+  color: black;
   border-radius: 8px;
   border: none;
   padding: 3%;
@@ -153,6 +165,14 @@ button {
   text-decoration: none;
   cursor: pointer;
   font-family: American Typewriter, serif;
+}
+
+#titleRB {
+  font-weight: bold;
+
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 /* Design av radiobuttons */
@@ -196,6 +216,7 @@ button {
   outline: none;
   position: relative;
   z-index: 1000;
+  margin-top: 3px;
 }
 .radio:hover {
   background: rgb(240, 74, 74);
@@ -329,6 +350,10 @@ button {
   #title {
     font-size: 20px;
   }
+
+  #option-text {
+    margin-bottom: 15px;
+  }
   .radio {
     margin-right: 8px;
     width: 25px;
@@ -339,6 +364,13 @@ button {
   }
   svg {
     margin-bottom: 7%;
+  }
+
+  #poetry-category,
+  #picture-category,
+  #music-category {
+    padding-bottom: 10px;
+    margin: 0px;
   }
 }
 
@@ -370,7 +402,7 @@ button {
 }
 
 /*Tablets and laptops*/
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1330px) {
   .options-container,
   .picture-container,
   .text-container {

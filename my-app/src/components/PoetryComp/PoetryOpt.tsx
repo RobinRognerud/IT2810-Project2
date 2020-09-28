@@ -9,6 +9,8 @@ const PoetryOpt: React.FC<IPoetryOptProps> = ({ poetryNo, updatePoetryNo }) => {
   return (
     <div id="product-options">
       <div id="poetry-category">
+        <p id="titleRB"> Poetry:</p>
+
         <label>
           Dance
           <input

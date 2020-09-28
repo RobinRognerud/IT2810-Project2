@@ -9,6 +9,7 @@ const MusicOpt: React.FC<IMusicOptProps> = ({ musicNo, updateMusicNo }) => {
   return (
     <div id="product-options">
       <div id="music-category">
+        <p id="titleRB">Music:</p>
         <label>
           Happy
           <input
