@@ -157,7 +157,7 @@ exports[`renders main correctly 1`] = `
         <p
           id="author"
         >
-           Writen by 
+           Written by 
           
         </p>
       </div>
@@ -186,6 +186,11 @@ exports[`renders main correctly 1`] = `
       <div
         id="picture-category"
       >
+        <p
+          id="titleRB"
+        >
+          Picture:
+        </p>
         <label>
           Singing ball
           <input
@@ -227,6 +232,11 @@ exports[`renders main correctly 1`] = `
       <div
         id="music-category"
       >
+        <p
+          id="titleRB"
+        >
+          Music:
+        </p>
         <label>
           Happy
           <input
@@ -268,6 +278,11 @@ exports[`renders main correctly 1`] = `
       <div
         id="poetry-category"
       >
+        <p
+          id="titleRB"
+        >
+           Poetry:
+        </p>
         <label>
           Dance
           <input
@@ -306,7 +321,7 @@ exports[`renders main correctly 1`] = `
     <p
       id="favorite-text"
     >
-      Save your favoirte art:
+      Save your favorite art:
     </p>
     <div
       className="FavoriteButton-container"
