@@ -6,28 +6,22 @@ import App from "./App";
 
 Enzyme.configure({ adapter: new Adapter() });
 
-it("App loads startpage correctly", () => {
-  const wrapper = Enzyme.mount(<App />);
-  const header = wrapper.find("startpage");
-  expect(header).toBeTruthy();
-});
-
-it("App loads header correctly", () => {
-  const wrapper = Enzyme.mount(<App />);
-  const container = wrapper.find("header");
-  expect(container).toBeTruthy();
-});
-
 it("App loads main correctly", () => {
   const wrapper = Enzyme.mount(<App />);
-  const header = wrapper.find("main");
-  expect(header).toBeTruthy();
+  const main = wrapper.find("Main");
+  expect(main).toBeTruthy();
+});
+
+it("App loads darkmodeButton correctly", () => {
+  const wrapper = Enzyme.mount(<App />);
+  const darkmodeButton = wrapper.find("DarkmodeButton");
+  expect(darkmodeButton).toBeTruthy();
 });
 
 it("App loads footer correctly", () => {
   const wrapper = Enzyme.mount(<App />);
-  const container = wrapper.find("footer");
-  expect(container).toBeTruthy();
+  const footer = wrapper.find("Footer");
+  expect(footer).toBeTruthy();
 });
 
 describe("App", () => {
