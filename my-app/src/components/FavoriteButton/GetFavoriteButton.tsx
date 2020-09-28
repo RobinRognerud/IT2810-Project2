@@ -8,8 +8,8 @@ const GetFavoriteButton: React.FC<IGetFavoriteButtonProps> = ({
   getFavorite,
 }) => {
   return (
-    <div>
-      <button id="favoriteButton" onClick={getFavorite}>
+    <div className="FavoriteButton-container">
+      <button className="favoriteButton" onClick={getFavorite}>
         Get favorite ❤
       </button>
     </div>
