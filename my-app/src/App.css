@@ -36,6 +36,15 @@ html {
   font-size: 20px;
 }
 
+#poetry-category,
+#picture-category,
+#music-category {
+  display: flex;
+
+  padding-bottom: 10px;
+  margin: 30px;
+}
+
 #favorite-text {
   margin-top: 40px;
   font-weight: bold;
@@ -43,6 +52,8 @@ html {
 
 #option-text {
   font-weight: bold;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
 }
 
 .music {
@@ -103,6 +114,7 @@ audio {
 p {
   font-family: American Typewriter, serif;
   font-size: 15px;
+  margin: 0px;
 }
 
 label {
@@ -124,8 +136,8 @@ button {
 }
 
 #darkmodeButton {
-  background-color: black;
-  color: beige;
+  background-color: beige;
+  color: black;
   border-radius: 8px;
   border: none;
   padding: 3%;
@@ -137,6 +149,14 @@ button {
 
 .page-container {
   text-align: center;
+}
+
+#titleRB {
+  font-weight: bold;
+
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 /* Design av radiobuttons */
@@ -180,6 +200,7 @@ button {
   outline: none;
   position: relative;
   z-index: 1000;
+  margin-top: 3px;
 }
 .radio:hover {
   background: rgb(240, 74, 74);
@@ -233,6 +254,10 @@ button {
   #title {
     font-size: 20px;
   }
+
+  #option-text {
+    margin-bottom: 15px;
+  }
   .radio {
     margin-right: 8px;
     width: 25px;
@@ -243,6 +268,13 @@ button {
   }
   #saveFavoriteButton {
     margin-bottom: 15px;
+  }
+
+  #poetry-category,
+  #picture-category,
+  #music-category {
+    padding-bottom: 10px;
+    margin: 0px;
   }
 }
 
