@@ -195,7 +195,7 @@ exports[`App render matches snapshot 1`] = `
             <p
               id="author"
             >
-               Writen by 
+               Written by 
               
             </p>
           </div>
@@ -224,6 +224,11 @@ exports[`App render matches snapshot 1`] = `
           <div
             id="picture-category"
           >
+            <p
+              id="titleRB"
+            >
+              Picture:
+            </p>
             <label>
               Singing ball
               <input
@@ -265,6 +270,11 @@ exports[`App render matches snapshot 1`] = `
           <div
             id="music-category"
           >
+            <p
+              id="titleRB"
+            >
+              Music:
+            </p>
             <label>
               Happy
               <input
@@ -306,6 +316,11 @@ exports[`App render matches snapshot 1`] = `
           <div
             id="poetry-category"
           >
+            <p
+              id="titleRB"
+            >
+               Poetry:
+            </p>
             <label>
               Dance
               <input
@@ -344,7 +359,7 @@ exports[`App render matches snapshot 1`] = `
         <p
           id="favorite-text"
         >
-          Save your favoirte art:
+          Save your favorite art:
         </p>
         <div
           className="FavoriteButton-container"
