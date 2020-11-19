@@ -1,5 +1,7 @@
 [![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.idi.ntnu.no/#https://gitlab.stud.idi.ntnu.no/it2810-h20/team-51/project-2) 
 
+Løsning på prosjekt 2 i Webutvikling - IT2810. I samarbeid med Siw Døvle og Ragnhild Øie Langåker
+
 # Project 2
 
 Prosjekt 2 i Webutvikling - Gruppe 51
